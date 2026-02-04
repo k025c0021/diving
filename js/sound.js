@@ -1,7 +1,5 @@
-const homeBtn = document.getElementById("homeBtn");
-const clickSound = document.getElementById("clickSound");
-
-homeBtn.addEventListener("click", () => {
-    clickSound.currentTime = 0; // 連続クリック対応
+homeBtn.addEventListener("click", (event) => {
+    event.preventDefault(); 
+    clickSound.currentTime = 0;
     clickSound.play();
 });
